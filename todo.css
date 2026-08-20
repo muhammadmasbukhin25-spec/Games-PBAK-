@@ -1,0 +1,43 @@
+/* Simple To‑Do list styles */
+:root{
+  --bg:#f4f6f8;
+  --card:#ffffff;
+  --accent:#2b6cb0;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{
+  font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  margin:0;
+  padding:24px;
+}
+.app{
+  width:100%;
+  max-width:640px;
+  background:var(--card);
+  border-radius:10px;
+  padding:20px;
+  box-shadow:0 6px 18px rgba(16,24,40,0.08);
+}
+h1{margin:0 0 12px 0}
+.todo-form{display:flex;gap:8px;margin-bottom:12px}
+.todo-form input{
+  flex:1;padding:10px 12px;border:1px solid #e5e7eb;border-radius:8px;font-size:16px;
+}
+.todo-form button{padding:10px 14px;border:none;background:var(--accent);color:#fff;border-radius:8px;cursor:pointer}
+.controls{display:flex;align-items:center;gap:12px;color:var(--muted);margin-bottom:10px}
+.controls button{background:transparent;border:1px solid #e5e7eb;padding:6px 10px;border-radius:8px;cursor:pointer}
+.todo-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.todo-item{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid #eef2f7;border-radius:8px}
+.todo-item .text{flex:1}
+.todo-item.completed .text{ text-decoration:line-through;color:#9aa1a8 }
+.icon-btn{background:transparent;border:none;cursor:pointer;padding:6px;border-radius:6px}
+.icon-btn:hover{background:#f3f4f6}
+.edit-input{flex:1;padding:8px;border:1px solid #e5e7eb;border-radius:6px}
+.empty{color:var(--muted);text-align:center;padding:18px}
+@media (max-width:420px){.todo-form input{font-size:14px}.todo-form button{padding:8px 10px}}
